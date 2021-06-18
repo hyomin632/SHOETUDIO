@@ -1,12 +1,120 @@
 <%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 <!DOCTYPE html>
-<html>
+<html lang="kr" dir="ltr">
 <head>
-  <title>JSP - Hello World</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" type="text/css" href="vendors/css/normalise.css" />
+  <link rel="stylesheet" type="text/css" href="vendors/css/grid.css" />
+  <link
+          rel="stylesheet"
+          type="text/css"
+          href="vendors/css/ionicons.min.css"
+  />
+  <link rel="stylesheet" type="text/css" href="resources/css/index.css" />
+  <link rel="stylesheet" type="text/css" href="resources/css/queries.css" />
+  <link
+          href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;1,100&display=swap"
+          rel="stylesheet"
+          type="text/css"
+  />
+  <link
+          href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css"
+          rel="stylesheet"
+          type="text/css"
+  />
+  <link
+          href="https://cdn.rawgit.com/mdehoog/Semantic-UI/6e6d051d47b598ebab05857545f242caf2b4b48c/dist/semantic.min.css"
+          rel="stylesheet"
+          type="text/css"
+  />
+  <script src="https://code.jquery.com/jquery-2.1.4.js"></script>
+  <script src="https://cdn.rawgit.com/mdehoog/Semantic-UI/6e6d051d47b598ebab05857545f242caf2b4b48c/dist/semantic.min.js"></script>
+  <title>SHOETUDIO</title>
 </head>
 <body>
-<h1><%= "Hello World!" %></h1>
-<br/>
-<a href="hello-servlet">Hello Servlet</a>
+<div class="row">
+  <div class="span-1-of-4">
+    <section class="showcase">
+      <header>
+        <img
+                src="resources/img/Shoetudio_logo.png"
+                alt="Shoetudio_Logo"
+                class="logo"
+        />
+        <div class="menu">
+          <ul class="main-nav">
+            <li><a href="about_us.html">About Us</a></li>
+            <li><a href="#">Custom</a></li>
+            <li><a href="#">Artist</a></li>
+            <li><a href="#">Community</a></li>
+          </ul>
+        </div>
+      </header>
+      <video src="converse.mp4" muted loop autoplay></video>
+      <div class="overlay"></div>
+      <div class="text">
+        <h1>
+          The new era of custom shoes<br />
+          Starts right here on Shoetudio
+        </h1>
+        <a class="btn btn-full" id="test" href="#">Log In</a>
+        <a class="btn btn-ghost" href="#">Sign In</a>
+
+        <div class="ui modal test">
+          <div class="ui middle aligned center aligned grid">
+            <div class="column">
+              <h2 class="ui blue image header">
+                <img src="resources/img/Shoetudio_logo.png" class="image" />
+                <div class="content">Welcome to Shoetudio</div>
+              </h2>
+              <form class="ui large form">
+                <div class="ui segment">
+                  <div class="field">
+                    <div class="ui left icon input">
+                      <i class="user icon"></i>
+                      <input
+                              type="text"
+                              name="email"
+                              placeholder="E-mail address"
+                      />
+                    </div>
+                  </div>
+                  <div class="field">
+                    <div class="ui left icon input">
+                      <i class="lock icon"></i>
+                      <input
+                              type="password"
+                              name="password"
+                              placeholder="Password"
+                      />
+                    </div>
+                  </div>
+                  <div class="ui fluid large primary submit button">
+                    Login
+                  </div>
+                </div>
+              </form>
+
+              <div class="ui message">
+                New to us? <a href="#">Sign Up</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+</div>
+<script>
+  $(function () {
+    $("#test").click(function () {
+      $(".test").modal("show");
+    });
+    $(".test").modal({
+      closable: true,
+    });
+  });
+</script>
 </body>
 </html>
