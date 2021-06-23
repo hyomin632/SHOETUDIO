@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="community">
+    <!-- 사용자 커스텀 게시판 -->
+    <!-- 사용자 커스텀 게시판 -->
+    <!-- 글 목록 -->
+    <select id="selectCommunity" statementType="PREPARED"
+            parameterType="int" resultType="Shoetudio.spring.mvc.vo.Community" >
+        select cmno, title, userid, regdate, views, thumbup from community
+        order by cmno desc limit #{cnum}, 20
+    </select>
+
+    <!-- 글 갯수 -->
+    <select id="countCommunity" statementType="PREPARED" resultType="int" >
+        select count(cmno) cnt from community
+    </select>
+
+    <!-- 글 작성 -->
+    <insert id="insertCommunity" statementType="PREPARED"
+            parameterType="Shoetudio.spring.mvc.vo.Community" >
+        insert into community (title, userid, contents, fnames, fsizes, uuid)
+        values (#{title}, #{userid}, #{contents}, #{fnames}, #{fsizes}, #{uuid})
+    </insert>
+
+    <!-- 글 조회 -->
+    <select id="selectOne" statementType="PREPARED"
+            parameterType="String" resultType="Shoetudio.spring.mvc.vo.Community" >
+        select * from community where cmno = #{cmno}
+    </select>
+
+    <!-- 조회수 -->
+    <update id="viewsCommunity" statementType="PREPARED" parameterType="String" >
+        update community set views = views + 1 where cmno = #{cmno}
+    </update>
+
+    <!-- 글 삭제 -->
+    <delete id="deleteCommunity" statementType="PREPARED" parameterType="String" >
+        delete from community where cmno = #{cmno}
+    </delete>
+
+    <!-- 글 수정 -->
+    <update id="updateCommunity" statementType="PREPARED" parameterType="Shoetudio.spring.mvc.vo.Community" >
+        update community set title = #{title}, contents = #{contents}
+            <if test="todie != ''">
+                , fnames = #{fnames}, fsizes = #{fsizes}
+            </if>
+        where cmno = #{cmno}
+    </update>
+
+    <!-- 기존 파일 이름 읽어옴  -->
+    <select id="readFnames" statementType="PREPARED" parameterType="String" resultType="String" >
+        select fnames from community where cmno = #{cmno}
+    </select>
+
+    <!-- 기존 파일 크기 읽어옴  -->
+    <select id="readFsizes" statementType="PREPARED" parameterType="String" resultType="String" >
+        select fsizes from community where cmno = #{cmno}
+    </select>
+
+    <!-- 마지막 게시글 번호 -->
+    <select id="lastCommId" statementType="PREPARED" resultType="int" >
+        select AUTO_INCREMENT-1 cmno from information_schema.TABLES
+        where TABLE_NAME = 'community';
+    </select>
+
+    <!-- 검색 기능 -->
+    <select id="findSelect" statementType="PREPARED"
+            parameterType="map" resultType="Shoetudio.spring.mvc.vo.Community" >
+        select cmno, title, userid, regdate, views, thumbup from community
+        <if test="ftype != '(제목+내용)'"> where ${ftype} like concat(#{fkey}, '%') </if>
+        <if test="ftype == '(제목+내용)'"> where title like concat(#{fkey}, '%') or contents like concat(#{fkey}, '%') </if>
+        order by cmno desc limit #{snum}, 20
+    </select>
+
+    <select id="findSelectCount" statementType="PREPARED" parameterType="map" resultType="int" >
+        select count(cmno) cnt from community
+        <if test="ftype != '(제목+내용)'"> where ${ftype} like concat(#{fkey}, '%') </if>
+        <if test="ftype == '(제목+내용)'"> where title like concat(#{fkey}, '%') or contents like concat(#{fkey}, '%') </if>
+    </select>
+
+</mapper>
