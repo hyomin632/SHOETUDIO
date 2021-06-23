@@ -1,16 +1,88 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: User
-  Date: 2021-06-18
-  Time: 오후 4:37
-  To change this template use File | Settings | File Templates.
---%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<html>
-<head>
-    <title>Title</title>
-</head>
-<body>
+<script src="https://www.google.com/recaptcha/api.js"></script>
+<!-- 컨테이너 시작-->
+<div class="container">
+    <div id="main">
+        <div class="col-2 text-right offset-9">
+            <button type="button" class="btn btn-light" id="listartbtn">
+                <i class="fas fa-list"></i>&nbsp;To list</button></div>
 
-</body>
-</html>
+        <div class="card card-body bg-light col-10 offset-1">
+            <form id="artfrm" name="artfrm">
+
+                <div class="form-group row">
+                    <label class="col-2 col-form-label text-dark
+                                              text-right" for="title">Title</label>
+                    <input type="text" name="title" id="title"
+                           class="border-success form-control col-9">
+                </div>
+
+                <div class="form-group row">
+                    <label class="col-2 col-form-label text-dark
+                                              text-right" for="userid">Writer</label>
+                    <input type="text" name="userid" id="userid"
+                           class="border-success form-control col-9" readonly>
+                </div>
+
+                <div class="form-group row">
+                    <label class="col-2 col-form-label text-dark
+                                              text-right" for="contents">Contents</label>
+                    <textarea id="contents" name="contents" class="border-success form-control col-9" rows="10"></textarea>
+                </div>
+
+                <div class="form-group row">
+                    <label class="col-2 col-form-label text-dark
+                                              text-right" for="file1">Add File</label>
+                    <div class="custom-file col-9">
+                        <input type="file" name="file" id="file1"
+                               class="custom-file-input">
+                        <label class="custom-file-label">Add File...</label>
+                    </div>
+                    <div class="custom-file col-9 offset-2">
+                        <input type="file" name="file" id="file2"
+                               class="custom-file-input">
+                        <label class="custom-file-label">Add File...</label>
+                    </div>
+                    <div class="custom-file col-9 offset-2">
+                        <input type="file" name="file" id="file3"
+                               class="custom-file-input">
+                        <label class="custom-file-label">Add File...</label>
+                    </div>
+                    <div class="custom-file col-9 offset-2">
+                        <input type="file" name="file" id="file4"
+                               class="custom-file-input">
+                        <label class="custom-file-label">Add File...</label>
+                    </div>
+                    <div class="custom-file col-9 offset-2">
+                        <input type="file" name="file" id="file5"
+                               class="custom-file-input">
+                        <label class="custom-file-label">Add File...</label>
+                    </div>
+                </div>
+
+                <div class="form-group row"> <!-- 자동방지 시작 -->
+                    <label class="col-2 col-form-label text-dark
+                                              text-right">Recaptcha</label>
+                    <div class="g-recaptcha"
+                         data-sitekey="6LdwIwgbAAAAADTTDIJUsgs3xT5Th88IzbYCx8Sx"></div>
+                    <input type="hidden" id="g-recaptcha" name="g-recaptcha" />
+                </div> <!-- 자동방지 종료 -->
+
+                <div class="form-group row"> <!-- 버튼 시작-->
+                    <hr class="col-10">
+                    <div class="col-12 text-center">
+                        <button type="button" class="btn btn-primary"
+                                id="newartbtn"><i class="fas fa-check"></i>OK</button>
+                        <button type="reset" class="btn btn-danger"
+                                id="cancelbtn"><i class="fas fa-times"></i>Reset</button>
+                    </div>
+                </div> <!-- 버튼 종료-->
+
+            </form>
+        </div>
+    </div>
+</div>
+<!-- 컨테이너 끝-->
+
+
+

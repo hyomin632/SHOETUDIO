@@ -4,27 +4,8 @@
 <div id="main">
 <div class="container">
     <div class="row">
-        <div class="col-lg-12">
-            <div class="row">
-                <div class="col-md-5">
-                    <ul class="list-inline shop-top-menu pb-3 pt-1">
-                        <li class="list-inline-item">
-                            <a class="h3 text-dark text-decoration-none mr-3" href="#">All</a>
-                        </li>
-                        <li class="list-inline-item">
-                            <a class="h3 text-dark text-decoration-none mr-3" href="#">Nike</a>
-                        </li>
-                        <li class="list-inline-item">
-                            <a class="h3 text-dark text-decoration-none" href="#">Converse</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="row">
 
-        <!-- Start custom-list -->
+        <!-- 리스트 시작 -->
         <div class="col-md-3">
             <div class="card mb-6 product-wap rounded-0">
                 <div class="card rounded-0">
@@ -46,40 +27,39 @@
                         </li>
                     </ul>
                 </div>
+            </div>
+        </div>
+        <!-- 리스트 끝-->
 
             </div>
         </div>
-
-            </div>
-        </div>
-
-
     </div>
 
+
+<!-- 페이지 네이션 시작 -->
+<div class="row">
+    <div class="col-12">
+        <ul class="pagination justify-content-center">
+            <li class="page-item"><a href="#" class="page-link">이전</a></li>
+
+            <li class="page-item active"><a href="#" class="page-link">1</a></li>
+            <li class="page-item"><a href="#" class="page-link">2</a></li>
+            <li class="page-item"><a href="#" class="page-link">3</a></li>
+            <li class="page-item"><a href="#" class="page-link">4</a></li>
+            <li class="page-item"><a href="#" class="page-link">5</a></li>
+            <li class="page-item"><a href="#" class="page-link">6</a></li>
+            <li class="page-item"><a href="#" class="page-link">7</a></li>
+            <li class="page-item"><a href="#" class="page-link">8</a></li>
+            <li class="page-item"><a href="#" class="page-link">9</a></li>
+            <li class="page-item"><a href="#" class="page-link">10</a></li>
+
+            <li class="page-item"><a href="#" class="page-link">다음</a></li>
+        </ul>
+    </div>
 </div>
-
-
-<div div="row">
-    <ul class="pagination pagination-lg justify-content-end">
-        <li class="page-item disabled">
-            <a class="page-link active rounded-0 mr-3 shadow-sm border-top-0 border-left-0" href="#" tabindex="-1">1</a>
-        </li>
-        <li class="page-item">
-            <a class="page-link rounded-0 mr-3 shadow-sm border-top-0 border-left-0 text-dark" href="#">2</a>
-        </li>
-        <li class="page-item">
-            <a class="page-link rounded-0 shadow-sm border-top-0 border-left-0 text-dark" href="#">3</a>
-        </li>
-    </ul>
-</div>
-</div>
-
-<!-- End Custom-list -->
+<!-- 페이지 네이션 끝-->
 
 
 
 
 
-</body>
-
-</html>

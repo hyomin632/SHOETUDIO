@@ -3,7 +3,8 @@
 <html lang="en">
 
 
-<!-- Open Content -->
+
+<!-- 본문 시작 -->
 <section class="bg-light">
     <div class="container">
         <div class="row">
@@ -37,10 +38,7 @@
                                 <i class="far fa-thumbs-up fa-2x"></i>
                                 <span>50</span>
                             </div>
-                            <div class="col-md-1 offset-1">
-                                <i class="far fa-thumbs-down fa-2x"></i>
-                                <span>10</span>
-                            </div>
+
                         </div>
                         <br>
                         <ul class="list-inline">
@@ -66,13 +64,16 @@
                             <li>Excepteur sint</li>
                         </ul>
 
-
                         <div class="row pb-3">
                             <div class="col d-grid">
-                                <button type="button" class="btn btn-success btn-lg" name="Edit" id="Edit" onclick="location.href='Edit-Design.html' ">Edit Design</button>
+                                <button type="button" class="btn btn-success btn-lg" name="Edit" id="HEdit" onclick="location.href='hEditDesign' ">
+                                    <img src="/img/highic.png" alt="Card image cap">High Edit Design</button>
+                            </div>
+                            <div class="col d-grid">
+                                <button type="button" class="btn btn-success btn-lg" name="Edit" id="LEdit" onclick="location.href='lEditDesign' ">
+                                    <img src="/img/lowic.png" alt="Card image cap">Low Edit Design</button>
                             </div>
                         </div>
-
 
                     </div>
                 </div>
@@ -80,9 +81,9 @@
         </div>
     </div>
 </section>
-<!-- Close Content -->
+<!-- 본문 끝 -->
 
-<!-- Start Article -->
+<!-- 신발 종류 시작 -->
 <section class="py-5">
     <div class="container">
         <div class="row text-left p-2 pb-3">
@@ -90,7 +91,7 @@
         </div>
 
         <!--Start Carousel Wrapper-->
-        <div id="carousel-related-product">
+        <div id="product">
 
             <div class="p-2 pb-3">
                 <div class="product-wap card rounded-0">
@@ -143,53 +144,9 @@
             </div>
 
 
-
-
         </div>
 
 
     </div>
 </section>
-<!-- End Article -->
-
-<!-- Start Script -->
-<script src="https://code.jquery.com/jquery-3.5.1.min.js" crossorigin="anonymous"></script>
-<script src="/js/bootstrap.bundle.min.js"></script>
-<script src="/js/templatemo.js"></script>
-<script src="/js/custom.js"></script>
-<!-- End Script -->
-
-<!-- Start Slider Script -->
-<script src="/js/slick.min.js"></script>
-<script>
-    $('#carousel-related-product').slick({
-        infinite: true,
-        arrows: false,
-        slidesToShow: 4,
-        slidesToScroll: 3,
-        dots: true,
-        responsive: [{
-            breakpoint: 1024,
-            settings: {
-                slidesToShow: 3,
-                slidesToScroll: 3
-            }
-        },
-            {
-                breakpoint: 600,
-                settings: {
-                    slidesToShow: 2,
-                    slidesToScroll: 3
-                }
-            },
-            {
-                breakpoint: 480,
-                settings: {
-                    slidesToShow: 2,
-                    slidesToScroll: 3
-                }
-            }
-        ]
-    });
-</script>
-<!-- End Slider Script -->
+<!-- 신발 종류 끝 -->
