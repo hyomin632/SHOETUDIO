@@ -4,8 +4,8 @@
     <!-- 사용자 회원가입-->
     <insert id="insertUser" statementType="PREPARED"
             parameterType="Shoetudio.spring.mvc.vo.User" >
-        insert into userInfo (uname, userid, upasswd, zipcode, addr1, addr2, uemail, uphone)
-        value (#{uname}, #{userid}, #{upasswd}, #{zipcode}, #{addr1}, #{addr2}, #{uemail}, #{uphone})
+        insert into userInfo (uname, userid, upasswd, zipcode, addr1, addr2, uemail, uphone, utype)
+        value (#{uname}, #{userid}, #{upasswd}, #{zipcode}, #{addr1}, #{addr2}, #{uemail}, #{uphone}, #{utype})
     </insert>
 
     <!-- 아이디 중복 체크 -->

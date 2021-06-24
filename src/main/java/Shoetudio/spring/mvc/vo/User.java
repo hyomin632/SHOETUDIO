@@ -13,6 +13,16 @@ public class User {
     protected String uemail;
     protected String uphone;
     protected String ujoindate;
+    protected String utype;
+
+
+    public String getUtype() {
+        return utype;
+    }
+
+    public void setUtype(String utype) {
+        this.utype = utype;
+    }
 
     public String getUno() {
         return uno;
