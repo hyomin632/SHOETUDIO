@@ -1,9 +1,37 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!DOCTYPE html>
 <html lang="en">
+<!-- Bootstrap CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+<link rel="stylesheet" type="text/css" href="/css/templatemo.css" />
+<link rel="stylesheet" type="text/css" href="/css/header_footer.css" />
+<link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" />
+
+<header>
+    <nav>
+        <div class="row">
+            <img
+                    src="/img/Shoetudio_logo.png"
+                    alt="Shoetudio"
+                    class="logo"
+            />
+            <ul class="main-nav">
+                <li>
+                    <a
+                            href="/Users/josephlee/Desktop/shoetudio_team_project/teamproject/about_us.html"
+                    >About Us</a
+                    >
+                </li>
+                <li><a href="#">Custom</a></li>
+                <li><a href="#">Artist</a></li>
+                <li><a href="/Users/josephlee/Desktop/shoetudio_team_project/teamproject/board/list.html">Community</a></li>
+            </ul>
+        </div>
+    </nav>
+</header>
 
 
-<!-- Open Content -->
+<!-- 본문 시작 -->
 <section class="bg-light">
     <div class="container">
         <div class="row">
@@ -37,10 +65,7 @@
                                 <i class="far fa-thumbs-up fa-2x"></i>
                                 <span>50</span>
                             </div>
-                            <div class="col-md-1 offset-1">
-                                <i class="far fa-thumbs-down fa-2x"></i>
-                                <span>10</span>
-                            </div>
+
                         </div>
                         <br>
                         <ul class="list-inline">
@@ -66,23 +91,28 @@
                             <li>Excepteur sint</li>
                         </ul>
 
-
                         <div class="row pb-3">
                             <div class="col d-grid">
-                                <button type="button" class="btn btn-success btn-lg" name="Edit" id="Edit" onclick="location.href='Edit-Design.html' ">Edit Design</button>
+                                <button type="button" class="btn btn-success btn-lg" name="Edit" id="HEdit" onclick="location.href='hEditDesign' ">
+                                    <img src="/img/highic.png" alt="Card image cap">High Edit Design</button>
+                            </div>
+                            <div class="col d-grid">
+                                <button type="button" class="btn btn-success btn-lg" name="Edit" id="LEdit" onclick="location.href='lEditDesign' ">
+                                    <img src="/img/lowic.png" alt="Card image cap">Low Edit Design</button>
                             </div>
                         </div>
-
 
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-</section>
-<!-- Close Content -->
+    </div
 
-<!-- Start Article -->
+
+</section>
+<!-- 본문 끝 -->
+
+<!-- 신발 종류 시작 -->
 <section class="py-5">
     <div class="container">
         <div class="row text-left p-2 pb-3">
@@ -90,106 +120,115 @@
         </div>
 
         <!--Start Carousel Wrapper-->
-        <div id="carousel-related-product">
-
-            <div class="p-2 pb-3">
+        <div class="row">
+        <div id="product">
+            <div class="col-3">
                 <div class="product-wap card rounded-0">
                     <div class="card rounded-0">
-                        <img class="card-img rounded-0 img-fluid" src="/img/custom%20ex1.png">
+                        <img class="card-img rounded-0 img-fluid" src="/img/custom%20ex1.png"
+                        height="100px"
+                        width="auto">
                         <div class="card-img-overlay rounded-0 product-overlay d-flex align-items-center justify-content-center">
                         </div>
                     </div>
                 </div>
             </div>
 
-            <div class="p-2 pb-3">
+            <div class="col-3">
                 <div class="product-wap card rounded-0">
                     <div class="card rounded-0">
-                        <img class="card-img rounded-0 img-fluid" src="/img/custom%20ex2.png">
+                        <img class="card-img rounded-0 img-fluid" src="/img/custom%20ex2.png"
+                             height="100px"
+                             width="auto">
                         <div class="card-img-overlay rounded-0 product-overlay d-flex align-items-center justify-content-center">
                         </div>
                     </div>
                 </div>
             </div>
 
-            <div class="p-2 pb-3">
+            <div class="col-3">
                 <div class="product-wap card rounded-0">
                     <div class="card rounded-0">
-                        <img class="card-img rounded-0 img-fluid" src="/img/custom%20ex3.png">
+                        <img class="card-img rounded-0 img-fluid" src="/img/custom%20ex3.png"
+                             height="100px"
+                             width="auto">
                         <div class="card-img-overlay rounded-0 product-overlay d-flex align-items-center justify-content-center">
                         </div>
                     </div>
                 </div>
             </div>
 
-            <div class="p-2 pb-3">
+            <div class="col-3">
                 <div class="product-wap card rounded-0">
                     <div class="card rounded-0">
-                        <img class="card-img rounded-0 img-fluid" src="/img/custom%20ex4.png">
+                        <img class="card-img rounded-0 img-fluid" src="/img/custom%20ex4.png"
+                             height="100px"
+                             width="auto">
+
                         <div class="card-img-overlay rounded-0 product-overlay d-flex align-items-center justify-content-center">
                         </div>
                     </div>
                 </div>
             </div>
 
-            <div class="p-2 pb-3">
+            <div class="col-3">
                 <div class="product-wap card rounded-0">
                     <div class="card rounded-0">
-                        <img class="card-img rounded-0 img-fluid" src="/img/custom%20ex5.png">
+                        <img class="card-img rounded-0 img-fluid" src="/img/custom%20ex5.png"
+                             height="100px"
+                             width="auto">
                         <div class="card-img-overlay rounded-0 product-overlay d-flex align-items-center justify-content-center">
                         </div>
                     </div>
                 </div>
             </div>
-
-
-
-
         </div>
-
-
+        </div>
     </div>
+
+
 </section>
-<!-- End Article -->
+<!-- 신발 종류 끝 -->
 
-<!-- Start Script -->
-<script src="https://code.jquery.com/jquery-3.5.1.min.js" crossorigin="anonymous"></script>
-<script src="/js/bootstrap.bundle.min.js"></script>
-<script src="/js/templatemo.js"></script>
-<script src="/js/custom.js"></script>
-<!-- End Script -->
-
-<!-- Start Slider Script -->
-<script src="/js/slick.min.js"></script>
-<script>
-    $('#carousel-related-product').slick({
-        infinite: true,
-        arrows: false,
-        slidesToShow: 4,
-        slidesToScroll: 3,
-        dots: true,
-        responsive: [{
-            breakpoint: 1024,
-            settings: {
-                slidesToShow: 3,
-                slidesToScroll: 3
-            }
-        },
-            {
-                breakpoint: 600,
-                settings: {
-                    slidesToShow: 2,
-                    slidesToScroll: 3
-                }
-            },
-            {
-                breakpoint: 480,
-                settings: {
-                    slidesToShow: 2,
-                    slidesToScroll: 3
-                }
-            }
-        ]
-    });
-</script>
-<!-- End Slider Script -->
+<footer>
+    <div class="row">
+        <div class="col span-1-of-2">
+            <ul class="footer-nav">
+                <li>
+                    <a
+                            href="/Users/josephlee/Desktop/shoetudio_team_project/teamproject/index(final).html"
+                    >Home</a
+                    >
+                </li>
+                <li>
+                    <a
+                            href="/Users/josephlee/Desktop/shoetudio_team_project/teamproject/about_us.html"
+                    >About Us</a
+                    >
+                </li>
+                <li><a href="#">Custom</a></li>
+                <li><a href="#">Artists</a></li>
+                <li><a href="#">Community</a></li>
+            </ul>
+        </div>
+        <div class="col span-1-of-2">
+            <ul class="social-icons">
+                <li>
+                    <a href="#"><i class="ion-social-facebook"></i></a>
+                </li>
+                <li>
+                    <a href="#"><i class="ion-social-twitter"></i></a>
+                </li>
+                <li>
+                    <a href="#"><i class="ion-social-googleplus"></i></a>
+                </li>
+                <li>
+                    <a href="#"><i class="ion-social-instagram"></i></a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="row">
+        <p>Copyright &copy; 2021 by Shoetudio. All rights reserved.</p>
+    </div>
+</footer>
