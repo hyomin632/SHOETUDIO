@@ -1,11 +1,43 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+
+
+
 <script src="https://www.google.com/recaptcha/api.js"></script>
+<!-- Bootstrap CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+<link rel="stylesheet" type="text/css" href="/css/templatemo.css" />
+<link rel="stylesheet" type="text/css" href="/css/header_footer.css" />
+<link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" />
+
+<header>
+    <nav>
+        <div class="row">
+            <img
+                    src="/img/Shoetudio_logo.png"
+                    alt="Shoetudio"
+                    class="logo"
+            />
+            <ul class="main-nav">
+                <li>
+                    <a
+                            href="/Users/josephlee/Desktop/shoetudio_team_project/teamproject/about_us.html"
+                    >About Us</a
+                    >
+                </li>
+                <li><a href="#">Custom</a></li>
+                <li><a href="#">Artist</a></li>
+                <li><a href="/Users/josephlee/Desktop/shoetudio_team_project/teamproject/board/list.html">Community</a></li>
+            </ul>
+        </div>
+    </nav>
+</header>
+
 <!-- 컨테이너 시작-->
 <div class="container">
     <div id="main">
         <div class="col-2 text-right offset-9">
             <button type="button" class="btn btn-light" id="listartbtn">
-                <i class="fas fa-list"></i>&nbsp;To list</button></div>
+                <i class="ion-ios-toggle"></i>&nbsp;To list</button></div>
 
         <div class="card card-body bg-light col-10 offset-1">
             <form id="artfrm" name="artfrm">
@@ -14,20 +46,20 @@
                     <label class="col-2 col-form-label text-dark
                                               text-right" for="title">Title</label>
                     <input type="text" name="title" id="title"
-                           class="border-success form-control col-9">
+                           class="border-light form-control col-9">
                 </div>
 
                 <div class="form-group row">
                     <label class="col-2 col-form-label text-dark
                                               text-right" for="userid">Writer</label>
                     <input type="text" name="userid" id="userid"
-                           class="border-success form-control col-9" readonly>
+                           class="border-light form-control col-9" readonly>
                 </div>
 
                 <div class="form-group row">
                     <label class="col-2 col-form-label text-dark
                                               text-right" for="contents">Contents</label>
-                    <textarea id="contents" name="contents" class="border-success form-control col-9" rows="10"></textarea>
+                    <textarea id="contents" name="contents" class="border-dark form-control col-9" rows="10"></textarea>
                 </div>
 
                 <div class="form-group row">
@@ -83,6 +115,49 @@
     </div>
 </div>
 <!-- 컨테이너 끝-->
+
+<footer>
+    <div class="row">
+        <div class="col span-1-of-2">
+            <ul class="footer-nav">
+                <li>
+                    <a
+                            href="/Users/josephlee/Desktop/shoetudio_team_project/teamproject/index(final).html"
+                    >Home</a
+                    >
+                </li>
+                <li>
+                    <a
+                            href="/Users/josephlee/Desktop/shoetudio_team_project/teamproject/about_us.html"
+                    >About Us</a
+                    >
+                </li>
+                <li><a href="#">Custom</a></li>
+                <li><a href="#">Artists</a></li>
+                <li><a href="#">Community</a></li>
+            </ul>
+        </div>
+        <div class="col span-1-of-2">
+            <ul class="social-icons">
+                <li>
+                    <a href="#"><i class="ion-social-facebook"></i></a>
+                </li>
+                <li>
+                    <a href="#"><i class="ion-social-twitter"></i></a>
+                </li>
+                <li>
+                    <a href="#"><i class="ion-social-googleplus"></i></a>
+                </li>
+                <li>
+                    <a href="#"><i class="ion-social-instagram"></i></a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="row">
+        <p>Copyright &copy; 2021 by Shoetudio. All rights reserved.</p>
+    </div>
+</footer>
 
 
 

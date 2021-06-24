@@ -1,5 +1,32 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<!-- Bootstrap CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+<link rel="stylesheet" type="text/css" href="/css/templatemo.css" />
+<link rel="stylesheet" type="text/css" href="/css/header_footer.css" />
+<link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" />
 
+<header>
+    <nav>
+        <div class="row">
+            <img
+                    src="/img/Shoetudio_logo.png"
+                    alt="Shoetudio"
+                    class="logo"
+            />
+            <ul class="main-nav">
+                <li>
+                    <a
+                            href="/Users/josephlee/Desktop/shoetudio_team_project/teamproject/about_us.html"
+                    >About Us</a
+                    >
+                </li>
+                <li><a href="#">Custom</a></li>
+                <li><a href="#">Artist</a></li>
+                <li><a href="/Users/josephlee/Desktop/shoetudio_team_project/teamproject/board/list.html">Community</a></li>
+            </ul>
+        </div>
+    </nav>
+</header>
 <!-- Start Content -->
 <div id="main">
 <div class="container">
@@ -58,6 +85,49 @@
     </div>
 </div>
 <!-- 페이지 네이션 끝-->
+
+<footer>
+    <div class="row">
+        <div class="col span-1-of-2">
+            <ul class="footer-nav">
+                <li>
+                    <a
+                            href="/Users/josephlee/Desktop/shoetudio_team_project/teamproject/index(final).html"
+                    >Home</a
+                    >
+                </li>
+                <li>
+                    <a
+                            href="/Users/josephlee/Desktop/shoetudio_team_project/teamproject/about_us.html"
+                    >About Us</a
+                    >
+                </li>
+                <li><a href="#">Custom</a></li>
+                <li><a href="#">Artists</a></li>
+                <li><a href="#">Community</a></li>
+            </ul>
+        </div>
+        <div class="col span-1-of-2">
+            <ul class="social-icons">
+                <li>
+                    <a href="#"><i class="ion-social-facebook"></i></a>
+                </li>
+                <li>
+                    <a href="#"><i class="ion-social-twitter"></i></a>
+                </li>
+                <li>
+                    <a href="#"><i class="ion-social-googleplus"></i></a>
+                </li>
+                <li>
+                    <a href="#"><i class="ion-social-instagram"></i></a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="row">
+        <p>Copyright &copy; 2021 by Shoetudio. All rights reserved.</p>
+    </div>
+</footer>
 
 
 
