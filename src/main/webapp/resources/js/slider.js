@@ -30,7 +30,7 @@ $('#CSlider').slick({
 
 $('#product').slick({
     infinite: true,
-    arrows: false,
+    arrows: true,
     slidesToShow: 4,
     slidesToScroll: 3,
     dots: true,
