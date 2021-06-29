@@ -8,6 +8,7 @@
 <link rel="stylesheet" type="text/css" href="/css/templatemo.css" />
 <link rel="stylesheet" type="text/css" href="/css/header_footer.css" />
 <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" />
+<link rel="stylesheet" type="text/css" href="/css/header-modal.css"/>
 
 <header>
     <nav>
@@ -27,38 +28,68 @@
                 <li><a href="#">Custom</a></li>
                 <li><a href="#">Artist</a></li>
                 <li><a href="/Users/josephlee/Desktop/shoetudio_team_project/teamproject/board/list.html">Community</a></li>
+                <li><a class="trigger3" id="11" style="cursor: pointer; color: white; font-size: 20px">Log In</a></li>
+                <li><a class="trigger4" id="22" style="cursor: pointer; color: white; font-size: 20px">Log Out</a></li>
             </ul>
         </div>
     </nav>
 </header>
 
 <!-- 컨테이너 시작-->
-<div class="container">
+<div class="container mb-3">
     <div id="main">
-        <div class="col-2 text-right offset-9">
+        <div class="col-2 text-right offset-9 mt-2 mb-2">
             <button type="button" class="btn btn-light" id="listartbtn">
                 <i class="ion-ios-toggle"></i>&nbsp;To list</button></div>
 
         <div class="card card-body bg-light col-10 offset-1">
             <form id="artfrm" name="artfrm">
 
-                <div class="form-group row">
+                <div class="form-group row" style="margin-bottom: 10px">
                     <label class="col-2 col-form-label text-dark
-                                              text-right" for="title">Title</label>
+                                              text-right" for="title" style="margin-top: 10px">Title</label>
                     <input type="text" name="title" id="title"
                            class="border-light form-control col-9">
                 </div>
 
-                <div class="form-group row">
+                <div class="form-group row" style="margin-bottom: 10px">
                     <label class="col-2 col-form-label text-dark
-                                              text-right" for="userid">Writer</label>
+                                              text-right" for="userid" style="margin-top: 10px">Writer</label>
                     <input type="text" name="userid" id="userid"
                            class="border-light form-control col-9" readonly>
                 </div>
 
+                <div class="form-group row" style="margin-bottom: 15px">
+                    <label class="col-2 col-form-label text-dark
+                                              text-right" for="model" style="margin-top: 10px">Model</label>
+                    <input type="text" name="model" id="model"
+                           class="border-light form-control col-9" >
+                </div>
+
                 <div class="form-group row">
                     <label class="col-2 col-form-label text-dark
-                                              text-right" for="contents">Contents</label>
+                                              text-right" for="production">Production Period</label>
+                    <input type="text" name="production" id="production"
+                           class="border-light form-control col-9" >
+                </div>
+
+                <div class="form-group row" style="margin-bottom: 10px">
+                    <label class="col-2 col-form-label text-dark
+                                              text-right" for="cost" style="margin-top: 10px">Work Cost</label>
+                    <input type="text" name="cost" id="cost"
+                           class="border-light form-control col-9" >
+                </div>
+
+                <div class="form-group row" style="margin-bottom: 20px" >
+                    <label class="col-2 col-form-label text-dark
+                                              text-right" for="shipping" style="margin-top: 10px">Shipping fee</label>
+                    <input type="text" name="shipping" id="shipping"
+                           class="border-light form-control col-9">
+                </div>
+
+                <div class="form-group row" style="margin-bottom: 15px">
+                    <label class="col-2 col-form-label text-dark
+                                              text-right" for="contents" style="margin-top: 110px">Contents</label>
                     <textarea id="contents" name="contents" class="border-dark form-control col-9" rows="10"></textarea>
                 </div>
 
@@ -92,9 +123,9 @@
                     </div>
                 </div>
 
-                <div class="form-group row"> <!-- 자동방지 시작 -->
+                <div class="form-group row" style="margin-top: 10px"> <!-- 자동방지 시작 -->
                     <label class="col-2 col-form-label text-dark
-                                              text-right">Recaptcha</label>
+                                              text-right" style="margin-top: 15px">Recaptcha</label>
                     <div class="g-recaptcha"
                          data-sitekey="6LdwIwgbAAAAADTTDIJUsgs3xT5Th88IzbYCx8Sx"></div>
                     <input type="hidden" id="g-recaptcha" name="g-recaptcha" />
@@ -159,5 +190,38 @@
     </div>
 </footer>
 
+<div class="modal3">
+    <div class="modal-content3" style="height: 250px">
+        <span class="close-button3">&times;</span>
+        <form>
+            <p stong>LOG IN</p>
+            <div style="text-align: left">
+                <h6>아이디 :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="text" placeholder="아이디를 입력해주세요" style="width: 220px"> </h6>
+            </div>
+            <div style="text-align: left">
+                <h6>비밀번호 :&nbsp;&nbsp;&nbsp;<input type="password" placeholder="비밀번호를 입력해주세요" style="width: 220px; height: 38px"> </h6>
+            </div>
 
+            <button class="lgm-btn1 modal-button2">confirm</button>
+            <button class="lgm-btn2">cancel</button>
+
+        </form>
+    </div>
+</div>
+<div class="modal4">
+    <div class="modal-content4" style="height: 200px">
+        <span class="close-button4">&times;</span>
+        <form>
+            <div style="text-align: center">
+                <h3>로그아웃 하시겠습니까?</h3>
+            </div>
+            <br/>
+            <div class="modal-button3" style="text-align: center">
+                <button class="lgm-btn1">YES</button>
+                <button class="lgm-btn2">NO</button>
+            </div>
+        </form>
+
+    </div>
+</div>
 

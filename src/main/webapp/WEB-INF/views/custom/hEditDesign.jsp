@@ -8,6 +8,7 @@
 <link rel="stylesheet" type="text/css" href="/css/templatemo.css" />
 <link rel="stylesheet" type="text/css" href="/css/header_footer.css" />
 <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" />
+<link rel="stylesheet" type="text/css" href="/css/header-modal.css"/>
 
 <header>
     <nav>
@@ -27,6 +28,8 @@
                 <li><a href="#">Custom</a></li>
                 <li><a href="#">Artist</a></li>
                 <li><a href="/Users/josephlee/Desktop/shoetudio_team_project/teamproject/board/list.html">Community</a></li>
+                <li><a class="trigger3" id="11" style="cursor: pointer; color: white; font-size: 20px">Log In</a></li>
+                <li><a class="trigger4" id="22" style="cursor: pointer; color: white; font-size: 20px">Log Out</a></li>
             </ul>
         </div>
     </nav>
@@ -171,7 +174,7 @@
                             <hr class="col-10" style="background-color: #fffb00">
 
                             <div class="col-md-10 offset-1">
-                                <button type="button" class="btn btn-success" id="saveBtn">Edit Save</button>
+                                <button type="button" class="btn btn-info" id="saveBtn">Edit Save</button>
                             </div>
                             </ul>
                         </div>
@@ -225,6 +228,40 @@
     </div>
 </footer>
 
+<div class="modal3">
+    <div class="modal-content3" style="height: 250px">
+        <span class="close-button3">&times;</span>
+        <form>
+            <p stong>LOG IN</p>
+            <div style="text-align: left">
+                <h6>아이디 :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="text" placeholder="아이디를 입력해주세요" style="width: 220px"> </h6>
+            </div>
+            <div style="text-align: left">
+                <h6>비밀번호 :&nbsp;&nbsp;&nbsp;<input type="password" placeholder="비밀번호를 입력해주세요" style="width: 220px; height: 38px"> </h6>
+            </div>
+
+            <button class="lgm-btn1 modal-button2">confirm</button>
+            <button class="lgm-btn2">cancel</button>
+
+        </form>
+    </div>
+</div>
+<div class="modal4">
+    <div class="modal-content4" style="height: 200px">
+        <span class="close-button4">&times;</span>
+        <form>
+            <div style="text-align: center">
+                <h3>로그아웃 하시겠습니까?</h3>
+            </div>
+            <br/>
+            <div class="modal-button3" style="text-align: center">
+                <button class="lgm-btn1">YES</button>
+                <button class="lgm-btn2">NO</button>
+            </div>
+        </form>
+
+    </div>
+</div>
 
 <!-- 사진 저장 스크립트 시작 -->
 <script>

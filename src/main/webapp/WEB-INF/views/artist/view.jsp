@@ -1,12 +1,18 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <style>
     #order {
-        height: 500px;
+        height: 850px;
         border: none;
-        line-height: 0px;
-        position: sticky;
-        top: 50px;
+        position:  -webkit-sticky;
+        position:  sticky;
+        top: -30px;
     }
+    tp {
+        /*word-wrap: break-word;*/
+        /*height: 300px;*/
+        line-height: 5px;
+    }
+
 </style>
 
 <!-- Bootstrap CSS -->
@@ -14,6 +20,7 @@
 <link rel="stylesheet" type="text/css" href="/css/templatemo.css" />
 <link rel="stylesheet" type="text/css" href="/css/header_footer.css" />
 <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" />
+<link rel="stylesheet" type="text/css" href="/css/header-modal.css"/>
 
 <header>
     <nav>
@@ -33,6 +40,8 @@
                 <li><a href="#">Custom</a></li>
                 <li><a href="#">Artist</a></li>
                 <li><a href="/Users/josephlee/Desktop/shoetudio_team_project/teamproject/board/list.html">Community</a></li>
+                <li><a class="trigger3" id="11" style="cursor: pointer; color: white; font-size: 20px">Log In</a></li>
+                <li><a class="trigger4" id="22" style="cursor: pointer; color: white; font-size: 20px">Log Out</a></li>
             </ul>
         </div>
     </nav>
@@ -109,18 +118,20 @@
 
                     <div class="col-md-4 mt-3" id="order"> <!--작업내용 시작-->
                         <div class="card">
-                            <div class="card-body">
+                            <div class="card-header">
                                 <h1 class="h2">Custom Pride Chuck Taylor All Star By You</h1>
-                                <hr>
-                                <br>
+                                <h4 style="text-align: right; margin-bottom: -18px">abc123</h4>
+                            </div>
+                            <div class="card-body">
                                 <ul class="list-inline">
-                                    <li class="list-inline-item">
-                                        <h6>Brand:</h6>
-                                    </li>
-                                    <li class="list-inline-item">
-                                        <p class="text-muted"><strong>Converse</strong></p>
-                                    </li>
-                                </ul>
+                                    <div style="text-align: right; margin-bottom: -45px">
+                                    <i class="far fa-eye">&nbsp;:</i>
+                                <li class="list-inline-item">
+                                    <p>123456<p>
+                                </li>
+                                    </div>
+
+                                <br>
                                 <li class="list-inline-item">
                                     <h6>Model: </h6>
                                 </li>
@@ -139,27 +150,42 @@
                                     <h6>Work Cost: </h6>
                                 </li>
                                 <li class="list-inline-item">
-                                    <p>50,000 &#8361;</p>
+                                    <p>&#8361; 50,000</p>
                                 </li>
                                 <br>
                                 <li class="list-inline-item">
                                     <h6>shipping fee :</h6>
                                 </li>
                                 <li class="list-inline-item">
-                                    <p>3,000 &#8361;</p>
+                                    <p>&#8361; 3,000</p>
                                 </li>
 
-                                <div class="row">
+                                <li class="list-inline-item">
+                                    <br>
+                                    <h6>To say :</h6>
+                                </li>
+                                </ul>
+
+                            <li class="list-inline-item">
+                                <p class="tp">안녕하세요안녕하세요
+                                    안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요
+                                    안녕하세요안녕하세요안녕하세요
+                                    안녕하세요안녕하세요안녕하세요
+                                </p>
+                            </li>
+                            </div>
+                                <div class="card-footer">
+                                    <div class="row">
                                     <div class="col-md-4">
-                                        <button type="button" class="btn btn-primary btn-xs" style="width: 100%" id="thumbup">
-                                            <span><i class="far fa-thumbs-up fa-2x"></i> 50</span> </button>
+                                        <button type="button" class="btn btn-primary btn-xs" id="thumbup">
+                                            <span style="font-size:30px;"><i class="ion-heart"></i>123</span> </button>
                                     </div>
                                     <div class="col-md-8">
-                                        <button type="button" class="btn btn-warning btn-xs" style="width: 100%; height: 100%"  id="Meetingbtn" data-toggle="modal" data-target="#Meetingfrm">
-                                            <span><i class="fas fa-comments fa-2x"></i>Meeting</span></button>
+                                        <button type="button" class="btn btn-warning btn-xs" id="Meetingbtn" data-toggle="modal" data-target="#Meetingfrm">
+                                            <span style="font-size:30px"><i class="fas fa-comments"></i>Meeting</span></button>
+                                    </div>
                                     </div>
                                 </div>
-                            </div>
                         </div>
                     </div><!--작업내용 끝-->
 
@@ -184,45 +210,46 @@
 <div class="modal" id="Meetingfrm" tabindex="-1">
     <div class="modal-dialog">
         <div class="modal-content">
-            <div class="modal-header" style="background-color: #fffb00">
-                <h3>Meeting</h3>
+            <div class="modal-header" style="background-color: #000000">
+                <h3 class="text-white">Meeting</h3>
                 <button type="button" class="btn btn-light" id="mtexit">
                     <i class="fas fa-times"></i></button>
             </div>
             <div class="modal-body">
                 <form name="Mtfrm" id="Mtfrm" method="post">
-                    <div class="form-group row text-danger">
-                        <label for="title" class="col-form-label col-3 text-left">
+                    <div class="form-group row text-dark">
+                        <label for="title" class="col-form-label col-3 text-right" style="margin-top: 10px">
                             Title</label>
                         <input type="text" name="title" id="title"
-                               class="form-control col-md-9
-                               border-danger">
+                               class="form-control col-md-8
+                               border-dark">
                     </div>
-                    <div class="form-group row text-danger">
-                        <label for="userid" class="col-form-label col-3 text-left">
+                    <div class="form-group row text-dark">
+                        <label for="userid" class="col-form-label col-3 text-right" style="margin-top: 10px">
                             User</label>
                         <input type="text" name="userid" id="userid"
-                               class="form-control col-md-9
-                               border-danger">
+                               class="form-control col-md-8
+                               border-dark">
                     </div>
-                    <div class="form-group row text-danger">
-                        <label for="email" class="col-form-label col-3 text-left">
+                    <div class="form-group row text-dark">
+                        <label for="email" class="col-form-label col-3 text-right" style="margin-top: 10px">
                             E-mail</label>
                         <input type="text" name="email" id="email"
-                               class="form-control col-md-9
-                               border-danger">
+                               class="form-control col-md-8
+                               border-dark">
                     </div>
-                    <div class="form-group row text-danger">
+                    <div class="form-group row text-dark">
                         <label for="questions" class="col-form-label col-4 text-left">
                             Questions</label>
-                        <textarea id="questions" name="questions" class="border-danger form-control col-md-12" rows="15"></textarea>
+                        <textarea id="questions" name="questions" class="border-dark form-control col-md-12" rows="15"></textarea>
                     </div>
                     <hr class="col-12">
                     <div class="form-group row justify-content-center">
                         <button type="button"
-                                class="btn btn-success" id="Sendbtn">Send</button>
+                                class="btn btn-secondary text-white" id="Sendbtn" style="margin-right: 30px">Send</button>
+
                         <button type="reset"
-                                class="btn btn-warning text-white">Reset</button>
+                                class="btn btn-info text-white">Reset</button>
                     </div>
                 </form>
             </div>
@@ -273,6 +300,40 @@
     </div>
 </footer>
 
+<div class="modal3">
+    <div class="modal-content3" style="height: 250px">
+        <span class="close-button3">&times;</span>
+        <form>
+            <p stong>LOG IN</p>
+            <div style="text-align: left">
+                <h6>아이디 :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="text" placeholder="아이디를 입력해주세요" style="width: 220px"> </h6>
+            </div>
+            <div style="text-align: left">
+                <h6>비밀번호 :&nbsp;&nbsp;&nbsp;<input type="password" placeholder="비밀번호를 입력해주세요" style="width: 220px; height: 38px"> </h6>
+            </div>
+
+            <button class="lgm-btn1 modal-button2">confirm</button>
+            <button class="lgm-btn2">cancel</button>
+
+        </form>
+    </div>
+</div>
+<div class="modal4">
+    <div class="modal-content4" style="height: 200px">
+        <span class="close-button4">&times;</span>
+        <form>
+            <div style="text-align: center">
+                <h3>로그아웃 하시겠습니까?</h3>
+            </div>
+            <br/>
+            <div class="modal-button3" style="text-align: center">
+                <button class="lgm-btn1">YES</button>
+                <button class="lgm-btn2">NO</button>
+            </div>
+        </form>
+
+    </div>
+</div>
 
 
 
