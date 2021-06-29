@@ -21,5 +21,10 @@ public interface CommunityDAO {
 
     String readFnames(String cmno);
 
-    String readFsizes(String cmno);
+
+    String selectPrvno(String cmno);
+
+    String selectNctno(String cmno);
+
+    void updateRecmd(String cmno);
 }

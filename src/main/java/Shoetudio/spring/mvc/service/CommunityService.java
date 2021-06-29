@@ -19,4 +19,12 @@ public interface CommunityService {
     int countCommunity(String ftype, String fkey);
     boolean viewCountCommunity(String cmno);
 
+    String readPrecom(String cmno);
+
+    String readNextcom(String cmno);
+
+    void modifyRecmd(String cmno);
+
+
+
 }

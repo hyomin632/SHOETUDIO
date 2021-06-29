@@ -41,15 +41,12 @@ public class CommunityServiceImpl implements CommunityService {
             }   // for
 
             String fnames = "";
-            String fsizes = "";
 
             for (int i = 0; i < imgs.size(); ++i) {
                 fnames += imgs.get(i).split("[/]")[0] + "/";
-                fsizes += imgs.get(i).split("[/]")[1] + "/";
             }
 
             cm.setFnames(fnames);
-            cm.setFsizes(fsizes);
             cm.setUuid(uuid);
         }   // if
 
@@ -67,38 +64,30 @@ public class CommunityServiceImpl implements CommunityService {
                 if (!f.getOriginalFilename().isEmpty())
                     imgs.add(imgutil.ImageUpload(f, cm.getUuid()));
                 else
-                    imgs.add("-/-");
+                    imgs.add("-/-/-/-");
             }   // for
 
             String fn = cdao.readFnames(cm.getCmno());
-            String fs = cdao.readFsizes(cm.getCmno());
 
             String[] ofn = fn.split("[/]");
-            String[] ofs = fs.split("[/]");
 
             String fnames = "";
-            String fsizes = "";
             for (int i = 0; i < imgs.size(); ++i) {
                 fnames += imgs.get(i).split("[/]")[0] + "/";
-                fsizes += imgs.get(i).split("[/]")[1] + "/";
             }
 
             String[] nfn = fnames.split("[/]");
-            String[] nfs = fnames.split("[/]");
 
             String todie[] = new String[5];
             for(int i = 0; i < cm.getTodie().length(); ++i) {
                 int pos = Integer.parseInt(cm.getTodie().substring(i, i+1));
                 ofn[pos-1] = nfn[i];
-                ofs[pos-1] = nfs[i];
                 todie[i] = fn.split("[/]")[pos-1];
             }
 
             fnames = String.join("/", ofn);
-            fsizes = String.join("/", ofs);
 
             cm.setFnames(fnames);
-            cm.setFsizes(fsizes);
 
             // 이미지 파일 제거
             String fpath = "";  //경로
@@ -131,14 +120,14 @@ public class CommunityServiceImpl implements CommunityService {
 
     @Override
     public List<Community> readCommunity(String cp) {
-        int snum = (Integer.parseInt(cp) - 1) * 10;
+        int snum = (Integer.parseInt(cp) - 1) * 16;
 
         return cdao.selectCommunity(snum);
     }
 
     @Override
     public List<Community> readCommunity(String cp, String ftype, String fkey) {
-        int snum = (Integer.parseInt(cp) - 1) * 30;
+        int snum = (Integer.parseInt(cp) - 1) * 16;
 
         Map<String, Object> params = new HashMap<>();
         params.put("snum", snum);
@@ -162,7 +151,7 @@ public class CommunityServiceImpl implements CommunityService {
     public int countCommunity(String ftype, String fkey) {
         Map<String, Object> params = new HashMap<>();
         params.put("ftype", ftype);
-        params.put("fkye", fkey);
+        params.put("fkey", fkey);
 
         return cdao.selectCountCommunity();
     }
@@ -174,4 +163,20 @@ public class CommunityServiceImpl implements CommunityService {
 
         return isUpdated;
     }
+
+    @Override
+    public String readPrecom(String cmno) {
+        return cdao.selectPrvno(cmno);
+    }
+
+    @Override
+    public String readNextcom(String cmno) {
+        return cdao.selectNctno(cmno);
+    }
+
+    @Override
+    public void modifyRecmd(String cmno) {
+        cdao.updateRecmd(cmno);
+    }
+
 }

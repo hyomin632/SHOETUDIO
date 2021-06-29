@@ -66,7 +66,19 @@ public class CommunityDAOImpl implements CommunityDAO {
     }
 
     @Override
-    public String readFsizes(String cmno) {
-        return sqlSession.selectOne("community.readFsizes", cmno);
+    public String selectPrvno(String cmno) {
+        return sqlSession.selectOne("community.selectPrv", cmno);
     }
+
+    @Override
+    public String selectNctno(String cmno) {
+        return sqlSession.selectOne("community.selectNext", cmno);
+    }
+
+    @Override
+    public void updateRecmd(String cmno) {
+        sqlSession.update("community.updateThumbs", cmno);
+    }
+
+
 }
